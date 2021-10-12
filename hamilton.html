@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <!-- meta charset -->
+    <meta charset="utf-8" />
+    <!-- site title -->
+    <title>Hamilton</title>
+    <!-- meta description -->
+    <meta name="description" content="" />
+    <!-- mobile viwport meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- fevicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- ================================
+        CSS Files
+        ================================= -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Open+Sans:400,600,700,800"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/themefisher-fonts.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/dark.css" />
+    <link id="color-changer" rel="stylesheet" href="css/colors/color-0.css" />
+  </head>
+
+  <body class="dark">
+    <div class="preloader">
+      <div class="loading-mask"></div>
+      <div class="loading-mask"></div>
+      <div class="loading-mask"></div>
+      <div class="loading-mask"></div>
+      <div class="loading-mask"></div>
+    </div>
+
+    <main class="site-wrapper">
+      <div class="pt-table">
+        <div class="pt-tablecell page-about relative">
+          <!-- .close -->
+          <a href="./" class="page-close"><i class="tf-ion-close"></i></a>
+          <!-- /.close -->
+
+          <div class="container">
+            <div class="row">
+              <div
+                class="
+                  col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8
+                "
+              >
+                <div class="page-title text-center">
+                  <h2>Hamilton's <span class="primary">method</span></h2>
+                  <p>
+                    A brief description about the history of Hamilton's method.
+                  </p>
+                  <input
+                    type="number"
+                    class="seats"
+                    id="seats"
+                    placeholder="Seats to apportion"
+                  />
+                </div>
+              </div>
+
+              <div class="col-md-12 column">
+                <table class="table table-bordered" id="tab_logic">
+                  <thead>
+                    <tr>
+                      <th class="text-center">#</th>
+                      <th class="text-center">population</th>
+                      <th class="text-center">initial quota</th>
+                      <th class="text-center">final quota</th>
+                      <th class="text-center">initial fair share</th>
+                      <th class="text-center">final fair share</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="addr0">
+                      <td>1</td>
+                      <td>
+                        <input
+                          type="number"
+                          name="population"
+                          placeholder="Enter"
+                        />
+                      </td>
+                      <td>
+                        <p name="initialQuota">-</p>
+                      </td>
+                      <td>
+                        <p name="finalQuota">-</p>
+                      </td>
+                      <td>
+                        <p name="initialFairShare">-</p>
+                      </td>
+                      <td>
+                        <p name="finalFairShare">-</p>
+                      </td>
+                    </tr>
+                    <tr id="addr1"></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <a onclick="addRow()" class="btn btn-default pull-left">Add Row</a>
+            <a onclick="removeRow()" class="pull-right btn btn-default">Delete Row</a>
+          </div>
+
+          <!-- /.container -->
+        </div>
+        <!-- /.pt-tablecell -->
+      </div>
+      <!-- /.pt-table -->
+    </main>
+    <!-- /.site-wrapper -->
+
+    <!-- ================================
+        JavaScript Libraries
+        ================================= -->
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery-validation.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/webster.js"></script>
+  </body>
+</html>
