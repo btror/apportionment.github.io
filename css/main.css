@@ -41,12 +41,12 @@ p:last-child {
  * Selection color
  */
 ::-moz-selection {
-  background-color: #FA6862;
+  background-color: #c79b21; 
   color: #fff;
 }
 
 ::selection {
-  background-color: #FA6862;
+  background-color: #c79b21; 
   color: #fff;
 }
 
@@ -95,7 +95,7 @@ textarea, label {
 }
 
 .btn-primary {
-  background-color: #FA6862;
+  background-color: #c79b21; 
   border: 0;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
@@ -105,7 +105,7 @@ textarea, label {
   text-transform: uppercase;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:active:focus {
-  background-color: #f9423a;
+  background-color: #c79b21; 
 }
 
 .btn-border {
@@ -152,7 +152,7 @@ textarea, label {
 
 .primary,
 .link:hover {
-  color: #FA6862;
+  color: #c79b21; 
 }
 
 .no-gutter {
@@ -189,11 +189,11 @@ textarea, label {
 }
 
 .nicescroll-cursors {
-  background: #FA6862 !important;
+  background: #c79b21 !important;
 }
 
 .loading-mask {
-  background-color: #FA6862;
+  background-color: #c79b21; 
   height: 100%;
   left: 0;
   position: absolute;
@@ -213,7 +213,7 @@ textarea, label {
 	Start Styling
 -------------------------------------------------*/
 .site-wrapper {
-  border-top: 4px solid #FA6862;
+  border-top: 4px solid #c79b21; 
 }
 
 .page-close {
@@ -280,7 +280,7 @@ textarea, label {
   bottom: 14px;
 }
 .section-title h3::after {
-  background-color: #FA6862;
+  background-color: #c79b21; 
   width: 73px;
 }
 .section-title.light h3 {
@@ -360,7 +360,7 @@ textarea, label {
 }
 .hexagon-item:hover .hex-item div::before,
 .hexagon-item:hover .hex-item div::after {
-  background-color: #FA6862;
+  background-color: #c79b21; 
 }
 .hexagon-item:hover .hex-content svg {
   -webkit-transform: scale(0.97);
@@ -635,22 +635,6 @@ table td input {
   text-indent: -9999em;
   width: 30px;
   cursor: pointer;
-}
-
-.color-options li.c0 {
-  background-color: #FA6862;
-}
-
-.color-options li.c1 {
-  background-color: #02B7CE;
-}
-
-.color-options li.c2 {
-  background-color: #86A438;
-}
-
-.color-options li.c3 {
-  background-color: #F3A36D;
 }
 
 .pattern-options li {
