@@ -512,6 +512,9 @@ textarea, label {
 .seats {
   margin-top: 20px;
   text-align: center;
+  border: 1px solid #fff;
+  background-color: #2d313a; 
+  color: #e6ae03;
 }
 
 .table-bordered {
@@ -534,12 +537,38 @@ table td input {
   padding: 10px;
   text-align: center;
   box-sizing: border-box;
+  background-color: #2d313a; 
+  color: #e6ae03;
 }
 
 #buttons {
   width: 100pt;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(255, 255, 255, 0.164);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgba(255, 255, 255, 0.164);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgba(255, 255, 255, 0.164);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 /* =================================== */
 /*  Color Switcher

@@ -63,10 +63,10 @@
               </div>
 
               <div class="col-md-12 column">
-                <a onclick="addRow()" class="btn btn-default pull-left" id="buttons"
+                <a onclick="calculate()" class="btn btn-default pull-left" id="buttons"
                   >Calculate</a
                 >
-                <a onclick="removeRow()" class="pull-right btn btn-default" id="buttons"
+                <a onclick="resetTable()" class="pull-right btn btn-default" id="buttons"
                   >Reset</a
                 >
                 <br />
@@ -76,33 +76,21 @@
                     <tr>
                       <th class="text-center">#</th>
                       <th class="text-center">population</th>
-                      <th class="text-center">initial quota</th>
-                      <th class="text-center">final quota</th>
-                      <th class="text-center">initial fair share</th>
-                      <th class="text-center">final fair share</th>
+                      <th class="text-center">fair share</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr id="addr0">
-                      <td>1</td>
-                      <td>
+                      <td style="width: 5%">1</td>
+                      <td style="width: 47.5%">
                         <input
                           type="number"
                           name="population"
                           placeholder="Enter"
                         />
                       </td>
-                      <td>
-                        <p name="initialQuota">-</p>
-                      </td>
-                      <td>
-                        <p name="finalQuota">-</p>
-                      </td>
-                      <td>
-                        <p name="initialFairShare">-</p>
-                      </td>
-                      <td>
-                        <p name="finalFairShare">-</p>
+                      <td style="width: 47.5%">
+                        <p name="fairShare">-</p>
                       </td>
                     </tr>
                     <tr id="addr1"></tr>
@@ -135,6 +123,6 @@
     <script src="../js/owl.carousel.min.js"></script>
     <script src="../js/jquery-validation.min.js"></script>
     <script src="../js/main.js"></script>
-    <script src="../js/webster.js"></script>
+    <script src="../js/methods/equalproportions.js"></script>
   </body>
 </html>
