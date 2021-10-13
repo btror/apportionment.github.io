@@ -536,6 +536,10 @@ table td input {
   box-sizing: border-box;
 }
 
+#buttons {
+  width: 100pt;
+}
+
 
 /* =================================== */
 /*  Color Switcher

@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/dark.css" />
-    <link id="color-changer" rel="stylesheet" href="../css/colors/color-0.css" />
   </head>
 
   <body class="dark">
@@ -39,7 +38,9 @@
       <div class="pt-table">
         <div class="pt-tablecell page-about relative">
           <!-- .close -->
-          <a href="../index.html" class="page-close"><i class="tf-ion-close"></i></a>
+          <a href="../index.html" class="page-close"
+            ><i class="tf-ion-close"></i
+          ></a>
           <!-- /.close -->
 
           <div class="container">
@@ -51,9 +52,7 @@
               >
                 <div class="page-title text-center">
                   <h2>Webster's <span class="primary">method</span></h2>
-                  <p>
-                    A brief description about the history of Webster's method.
-                  </p>
+                  <p>A brief description about the history of Webster's method.</p>
                   <input
                     type="number"
                     class="seats"
@@ -64,6 +63,14 @@
               </div>
 
               <div class="col-md-12 column">
+                <a onclick="addRow()" class="btn btn-default pull-left" id="buttons"
+                  >Calculate</a
+                >
+                <a onclick="removeRow()" class="pull-right btn btn-default" id="buttons"
+                  >Reset</a
+                >
+                <br />
+                <br />
                 <table class="table table-bordered" id="tab_logic">
                   <thead>
                     <tr>
@@ -103,8 +110,10 @@
                 </table>
               </div>
             </div>
-            <a onclick="addRow()" class="btn btn-default pull-left">Add Row</a>
-            <a onclick="removeRow()" class="pull-right btn btn-default">Delete Row</a>
+            <a onclick="addRow()" class="btn btn-default pull-left" id="buttons">Add Row</a>
+            <a onclick="removeRow()" class="pull-right btn btn-default" id="buttons"
+              >Delete Row</a
+            >
           </div>
 
           <!-- /.container -->
