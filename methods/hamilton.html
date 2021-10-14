@@ -52,7 +52,9 @@
               >
                 <div class="page-title text-center">
                   <h2>Hamilton's <span class="primary">method</span></h2>
-                  <p>A brief description about the history of hamilton's method.</p>
+                  <p>
+                    A brief description about the history of hamilton's method.
+                  </p>
                   <input
                     type="number"
                     class="seats"
@@ -63,10 +65,16 @@
               </div>
 
               <div class="col-md-12 column">
-                <a onclick="calculate()" class="btn btn-default pull-left" id="buttons"
+                <a
+                  onclick="calculate()"
+                  class="btn btn-default pull-left"
+                  id="buttons"
                   >Calculate</a
                 >
-                <a onclick="resetTable()" class="pull-right btn btn-default" id="buttons"
+                <a
+                  onclick="resetTable()"
+                  class="pull-right btn btn-default"
+                  id="buttons"
                   >Reset</a
                 >
                 <br />
@@ -77,8 +85,8 @@
                       <th class="text-center">#</th>
                       <th class="text-center">population</th>
                       <th class="text-center">quota</th>
-                      <th class="text-center">initial<br>fair share</th>
-                      <th class="text-center">final<br>fair share</th>
+                      <th class="text-center">initial<br />fair share</th>
+                      <th class="text-center">final<br />fair share</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -93,13 +101,13 @@
                         />
                       </td>
                       <td style="width: 23.75%">
-                        <p name="quota">-</p>
+                        <p name="quota" id="quota1">-</p>
                       </td>
                       <td style="width: 23.75%">
-                        <p name="initialFairShare">-</p>
+                        <p name="initialFairShare" id="initialFairShare1">-</p>
                       </td>
                       <td style="width: 23.75%">
-                        <p name="finalFairShare">-</p>
+                        <p name="finalFairShare" id="finalFairShare1">-</p>
                       </td>
                     </tr>
                     <tr id="addr1"></tr>
@@ -107,8 +115,13 @@
                 </table>
               </div>
             </div>
-            <a onclick="addRow()" class="btn btn-default pull-left" id="buttons">Add Row</a>
-            <a onclick="removeRow()" class="pull-right btn btn-default" id="buttons"
+            <a onclick="addRow()" class="btn btn-default pull-left" id="buttons"
+              >Add Row</a
+            >
+            <a
+              onclick="removeRow()"
+              class="pull-right btn btn-default"
+              id="buttons"
               >Delete Row</a
             >
           </div>
