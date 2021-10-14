@@ -4,3 +4,5 @@
 click <a href="https://btror.github.io/apportionment.github.io/">here</a> to view the webpage.
 
 screenshot
+
+<img src="screenshot.JPG" width="650" height="380" >
