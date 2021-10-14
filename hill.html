@@ -4,7 +4,7 @@
     <!-- meta charset -->
     <meta charset="utf-8" />
     <!-- site title -->
-    <title>Jefferson</title>
+    <title>Hamilton</title>
     <!-- meta description -->
     <meta name="description" content="" />
     <!-- mobile viwport meta -->
@@ -19,10 +19,10 @@
       href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Open+Sans:400,600,700,800"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/themefisher-fonts.min.css" />
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/dark.css" />
+    <link rel="stylesheet" href="css/themefisher-fonts.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/dark.css" />
   </head>
 
   <body class="dark">
@@ -38,7 +38,7 @@
       <div class="pt-table">
         <div class="pt-tablecell page-about relative">
           <!-- .close -->
-          <a href="../index.html" class="page-close"
+          <a href="./" class="page-close"
             ><i class="tf-ion-close"></i
           ></a>
           <!-- /.close -->
@@ -51,13 +51,16 @@
                 "
               >
                 <div class="page-title text-center">
-                  <h2>Jefferson's <span class="primary">method</span></h2>
+                  <h2>Hill's <span class="primary">method</span></h2>
                   <p>
-                    Proposed in 1791 and used through 1842, Jefferson's method
-                    of apportionment, proposed by Thomas Jefferson, was adopted
-                    by congress after George Washington vetoed Hamilton's
-                    method. It was rejected in 1842 because it was biased
-                    towards large states.
+                    In the 1920s, congress started to take steps toward the
+                    apportionment method used to this day. One method, proposed
+                    by Joseph Hill, sought to keep the ratio of one state's
+                    "people per representative" to that of another as close to
+                    one as possible. A colleague of Joseph Hill, Edward
+                    Huntington, corrected an error in Hill's method, and named
+                    the corrected version the method of Equal Proportions (AKA
+                    Huntington Hill's method).
                   </p>
                   <input
                     type="number"
@@ -90,14 +93,20 @@
                       <th class="text-center">population</th>
                       <th class="text-center">initial quota</th>
                       <th class="text-center">final quota</th>
-                      <th class="text-center">initial fair share</th>
-                      <th class="text-center">final fair share</th>
+                      <th class="text-center">
+                        initial<br />geometric<br />mean
+                      </th>
+                      <th class="text-center">
+                        final<br />geometric<br />mean
+                      </th>
+                      <th class="text-center">initial<br />fair share</th>
+                      <th class="text-center">final<br />fair share</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr id="addr0">
                       <td style="width: 5%">1</td>
-                      <td>
+                      <td style="width: 13.5714285714%">
                         <input
                           type="number"
                           name="population"
@@ -105,16 +114,29 @@
                           id="population1"
                         />
                       </td>
-                      <td style="width: 19%">
+                      <td style="width: 13.5714285714%">
                         <p name="initialQuota" id="initialQuota1">-</p>
                       </td>
-                      <td style="width: 19%">
+                      <td style="width: 13.5714285714%">
                         <p name="finalQuota" id="finalQuota1">-</p>
                       </td>
-                      <td style="width: 19%">
+                      <td style="width: 13.5714285714%">
+                        <p
+                          name="initialGeometricMean"
+                          id="initialGeometricMean1"
+                        >
+                          -
+                        </p>
+                      </td>
+                      <td style="width: 13.5714285714%">
+                        <p name="finalGeometricMean" id="finalGeometricMean1">
+                          -
+                        </p>
+                      </td>
+                      <td style="width: 13.5714285714%">
                         <p name="initialFairShare" id="initialFairShare1">-</p>
                       </td>
-                      <td style="width: 19%">
+                      <td style="width: 13.5714285714%">
                         <p name="finalFairShare" id="finalFairShare1">-</p>
                       </td>
                     </tr>
@@ -149,14 +171,14 @@
     <!-- ================================
         JavaScript Libraries
         ================================= -->
-    <script src="../js/vendor/jquery-2.2.4.min.js"></script>
-    <script src="../js/vendor/bootstrap.min.js"></script>
-    <script src="../js/jquery.easing.min.js"></script>
-    <script src="../js/isotope.pkgd.min.js"></script>
-    <script src="../js/jquery.nicescroll.min.js"></script>
-    <script src="../js/owl.carousel.min.js"></script>
-    <script src="../js/jquery-validation.min.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/methods/jefferson.js"></script>
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery-validation.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/methods/hill.js"></script>
   </body>
 </html>

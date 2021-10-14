@@ -4,7 +4,7 @@
     <!-- meta charset -->
     <meta charset="utf-8" />
     <!-- site title -->
-    <title>Hamilton</title>
+    <title>Webster</title>
     <!-- meta description -->
     <meta name="description" content="" />
     <!-- mobile viwport meta -->
@@ -19,10 +19,10 @@
       href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Open+Sans:400,600,700,800"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/themefisher-fonts.min.css" />
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/dark.css" />
+    <link rel="stylesheet" href="css/themefisher-fonts.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/dark.css" />
   </head>
 
   <body class="dark">
@@ -38,7 +38,7 @@
       <div class="pt-table">
         <div class="pt-tablecell page-about relative">
           <!-- .close -->
-          <a href="../index.html" class="page-close"
+          <a href="./" class="page-close"
             ><i class="tf-ion-close"></i
           ></a>
           <!-- /.close -->
@@ -51,15 +51,14 @@
                 "
               >
                 <div class="page-title text-center">
-                  <h2>Hamilton's <span class="primary">method</span></h2>
+                  <h2>Webster's <span class="primary">method</span></h2>
                   <p>
-                    In 1792, congress approved Hamilton's method, proposed by
-                    Alexander Hamilton. It was vetoed by Washington but later
-                    adopted by congress in 1852 and used through 1911. It caused
-                    the Alabama Paradox in 1880. It assigns seats based on lower
-                    quotas. When all available seats aren't apportioned, the
-                    state with the highest fractional standard quota is assigned
-                    a remaining seat.
+                    In 1832, Daniel Webster proposed a method similar to
+                    Jefferson's method. It was adopted by congress in 1842, but
+                    replaced by Hamilton's method in 1852, and adopted again in
+                    1901. The most noteworthy distinction of Webster's method is
+                    it rounds the quotas to the nearest whole number. It
+                    modifies the divisor like Jefferson's and Adam's method.
                   </p>
                   <input
                     type="number"
@@ -90,9 +89,10 @@
                     <tr>
                       <th class="text-center">#</th>
                       <th class="text-center">population</th>
-                      <th class="text-center">quota</th>
-                      <th class="text-center">initial<br />fair share</th>
-                      <th class="text-center">final<br />fair share</th>
+                      <th class="text-center">initial quota</th>
+                      <th class="text-center">final quota</th>
+                      <th class="text-center">initial fair share</th>
+                      <th class="text-center">final fair share</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -106,13 +106,16 @@
                           id="population1"
                         />
                       </td>
-                      <td style="width: 23.75%">
-                        <p name="quota" id="quota1">-</p>
+                      <td style="width: 19%">
+                        <p name="initialQuota" id="initialQuota1">-</p>
                       </td>
-                      <td style="width: 23.75%">
+                      <td style="width: 19%">
+                        <p name="finalQuota" id="finalQuota1">-</p>
+                      </td>
+                      <td style="width: 19%">
                         <p name="initialFairShare" id="initialFairShare1">-</p>
                       </td>
-                      <td style="width: 23.75%">
+                      <td style="width: 19%">
                         <p name="finalFairShare" id="finalFairShare1">-</p>
                       </td>
                     </tr>
@@ -147,14 +150,14 @@
     <!-- ================================
         JavaScript Libraries
         ================================= -->
-    <script src="../js/vendor/jquery-2.2.4.min.js"></script>
-    <script src="../js/vendor/bootstrap.min.js"></script>
-    <script src="../js/jquery.easing.min.js"></script>
-    <script src="../js/isotope.pkgd.min.js"></script>
-    <script src="../js/jquery.nicescroll.min.js"></script>
-    <script src="../js/owl.carousel.min.js"></script>
-    <script src="../js/jquery-validation.min.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/methods/hamilton.js"></script>
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery-validation.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/methods/webster.js"></script>
   </body>
 </html>

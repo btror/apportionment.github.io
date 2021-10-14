@@ -4,7 +4,7 @@
     <!-- meta charset -->
     <meta charset="utf-8" />
     <!-- site title -->
-    <title>Adam</title>
+    <title>Equal Proportions</title>
     <!-- meta description -->
     <meta name="description" content="" />
     <!-- mobile viwport meta -->
@@ -19,10 +19,10 @@
       href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Open+Sans:400,600,700,800"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/themefisher-fonts.min.css" />
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/dark.css" />
+    <link rel="stylesheet" href="css/themefisher-fonts.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/dark.css" />
   </head>
 
   <body class="dark">
@@ -38,7 +38,7 @@
       <div class="pt-table">
         <div class="pt-tablecell page-about relative">
           <!-- .close -->
-          <a href="../index.html" class="page-close"
+          <a href="./" class="page-close"
             ><i class="tf-ion-close"></i
           ></a>
           <!-- /.close -->
@@ -51,13 +51,14 @@
                 "
               >
                 <div class="page-title text-center">
-                  <h2>Adam's <span class="primary">method</span></h2>
+                  <h2>Equal <span class="primary">Proportions</span></h2>
                   <p>
-                    In 1822, John Quincy Adams proposed a new method of
-                    apportionment as a remedy for Hamilton's method. It divides
-                    all the populations by a modified divisor and rounds the
-                    results up to the upper quota. It was never adopted by
-                    congress.
+                    In 1941, the method of equal proportions (AKA Huntington
+                    Hill's method) was adopted by congress. This method is the
+                    corrected version of Hill's method. It assigns seats in the
+                    House of Representatives according to a priority value for
+                    each state. Priority values are determined by multiplying a
+                    state's population by a multiplier. This method is used now.
                   </p>
                   <input
                     type="number"
@@ -81,7 +82,6 @@
                   id="buttons"
                   >Delete Row</a
                 >
-
                 <br />
                 <br />
                 <table class="table table-bordered" id="tab_logic">
@@ -89,16 +89,13 @@
                     <tr>
                       <th class="text-center">#</th>
                       <th class="text-center">population</th>
-                      <th class="text-center">initial quota</th>
-                      <th class="text-center">final quota</th>
-                      <th class="text-center">initial<br />fair share</th>
-                      <th class="text-center">final<br />fair share</th>
+                      <th class="text-center">fair share</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr id="addr0">
                       <td style="width: 5%">1</td>
-                      <td style="width: 19%">
+                      <td style="width: 47.5%">
                         <input
                           type="number"
                           name="population"
@@ -106,17 +103,8 @@
                           id="population1"
                         />
                       </td>
-                      <td style="width: 19%">
-                        <p name="initialQuota" id="initialQuota1">-</p>
-                      </td>
-                      <td style="width: 19%">
-                        <p name="finalQuota" id="finalQuota1">-</p>
-                      </td>
-                      <td style="width: 19%">
-                        <p name="initialFairShare" id="initialFairShare1">-</p>
-                      </td>
-                      <td style="width: 19%">
-                        <p name="finalFairShare" id="finalFairShare1">-</p>
+                      <td style="width: 47.5%">
+                        <p name="fairShare" id="fairShare1">-</p>
                       </td>
                     </tr>
                     <tr id="addr1"></tr>
@@ -150,14 +138,14 @@
     <!-- ================================
         JavaScript Libraries
         ================================= -->
-    <script src="../js/vendor/jquery-2.2.4.min.js"></script>
-    <script src="../js/vendor/bootstrap.min.js"></script>
-    <script src="../js/jquery.easing.min.js"></script>
-    <script src="../js/isotope.pkgd.min.js"></script>
-    <script src="../js/jquery.nicescroll.min.js"></script>
-    <script src="../js/owl.carousel.min.js"></script>
-    <script src="../js/jquery-validation.min.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/methods/adam.js"></script>
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery-validation.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/methods/equalproportions.js"></script>
   </body>
 </html>
