@@ -10,14 +10,20 @@ function addRow() {
   var cell3 = row.insertCell(3);
   var cell4 = row.insertCell(4);
   var cell5 = row.insertCell(5);
+  var cell6 = row.insertCell(6);
+  var cell7 = row.insertCell(7);
   cell0.innerHTML = table.tBodies[0].rows.length - 1;
   cell1.innerHTML = `<input type="number" id="population${
     table.rows.length - 2
   }" name="population" placeholder="Enter"/>`;
   cell2.innerHTML = `<p id="initialQuota${table.rows.length - 2}">-</p>`;
   cell3.innerHTML = `<p id="finalQuota${table.rows.length - 2}">-</p>`;
-  cell4.innerHTML = `<p id="initialFairShare${table.rows.length - 2}">-</p>`;
-  cell5.innerHTML = `<p id="finalFairShare${table.rows.length - 2}">-</p>`;
+  cell4.innerHTML = `<p id="initialGeometricMean${
+    table.rows.length - 2
+  }">-</p>`;
+  cell5.innerHTML = `<p id="finalGeometricMean${table.rows.length - 2}">-</p>`;
+  cell6.innerHTML = `<p id="initialFairShare${table.rows.length - 2}">-</p>`;
+  cell7.innerHTML = `<p id="finalFairShare${table.rows.length - 2}">-</p>`;
   clearData();
 }
 
@@ -40,7 +46,7 @@ function resetTable() {
   document.getElementById("output").innerText = "";
 }
 
-// Calculates the quotas, initial fair shares, final fair shares, and divisors for Jefferson's method.
+// Calculates the quotas, initial fair shares, final fair shares, and divisors for Huntington Hill's method.
 function calculate() {
   // Get the number of seats to apportion.
   seats = document.getElementById("seats").value;
@@ -80,22 +86,38 @@ function calculate() {
       var initialDivisor = totalPopulations / seats;
 
       // Calculate the initial quotas.
-      initialQuotas = [];
+      var initialQuotas = [];
       for (var i = 0; i < table.rows.length - 2; i++) {
         initialQuotas[i] =
           Math.round((populations[i] / initialDivisor) * 10000) / 10000;
       }
 
       // Calculate the initial fair shares.
-      initialFairShares = [];
+      var initialFairShares = [];
+      var initialGeometricMeans = [];
+      var finalGeometricMeans = [];
       for (var i = 0; i < table.rows.length - 2; i++) {
-        initialFairShares[i] = Math.floor(initialQuotas[i]);
+        var geoMean =
+          Math.round(
+            Math.sqrt(
+              Math.floor(initialQuotas[i] * (Math.floor(initialQuotas[i]) + 1))
+            ) * 10000
+          ) / 10000;
+        initialGeometricMeans[i] = geoMean;
+        finalGeometricMeans[i] = geoMean;
+        if (geoMean < initialQuotas[i]) {
+          initialFairShares[i] = Math.ceil(initialQuotas[i]);
+        } else if (geoMean > initialQuotas[i]) {
+          initialFairShares[i] = Math.floor(initialQuotas[i]);
+        } else {
+          initialFairShares[i] = 0;
+        }
       }
 
       var finalQuotas = [];
       var modifiedDivisor = totalPopulations / seats;
 
-      // Initialize the final quotas and decimal list.
+      // Initialize the final quotas.
       for (var i = 0; i < table.rows.length - 2; i++) {
         finalQuotas[i] =
           Math.round((populations[i] / modifiedDivisor) * 10000) / 10000;
@@ -105,7 +127,7 @@ function calculate() {
 
       // Initialize the final fair shares.
       for (var i = 0; i < table.rows.length - 2; i++) {
-        finalFairShares[i] = Math.floor(initialQuotas[i]);
+        finalFairShares[i] = Math.round(initialQuotas[i]);
       }
 
       // Calculate an estimator.
@@ -125,7 +147,18 @@ function calculate() {
           break;
         }
         for (var i = 0; i < table.rows.length - 2; i++) {
-          finalFairShares[i] = Math.floor(finalQuotas[i]);
+          var geoMean =
+            Math.round(
+              Math.sqrt(
+                Math.floor(finalQuotas[i]) * (Math.floor(finalQuotas[i]) + 1)
+              ) * 10000
+            ) / 10000;
+          finalGeometricMeans[i] = geoMean;
+          if (geoMean < finalQuotas[i]) {
+            finalFairShares[i] = Math.ceil(finalQuotas[i]);
+          } else if (geoMean > finalQuotas[i]) {
+            finalFairShares[i] = Math.floor(finalQuotas[i]);
+          }
         }
 
         if (
@@ -154,7 +187,18 @@ function calculate() {
           }
 
           for (var i = 0; i < table.rows.length - 2; i++) {
-            finalFairShares[i] = Math.floor(finalQuotas[i]);
+            var geoMean =
+              Math.round(
+                Math.sqrt(
+                  Math.floor(finalQuotas[i]) * (Math.floor(finalQuotas[i]) + 1)
+                ) * 10000
+              ) / 10000;
+            finalGeometricMeans[i] = geoMean;
+            if (geoMean < finalQuotas[i]) {
+              finalFairShares[i] = Math.ceil(finalQuotas[i]);
+            } else if (geoMean > finalQuotas[i]) {
+              finalFairShares[i] = Math.floor(finalQuotas[i]);
+            }
           }
         }
         timeKeeper += 1;
@@ -168,6 +212,10 @@ function calculate() {
             initialQuotas[i];
           document.getElementById(`finalQuota${i + 1}`).innerText =
             finalQuotas[i];
+          document.getElementById(`initialGeometricMean${i + 1}`).innerText =
+            initialGeometricMeans[i];
+          document.getElementById(`finalGeometricMean${i + 1}`).innerText =
+            finalGeometricMeans[i];
           document.getElementById(`initialFairShare${i + 1}`).innerText =
             initialFairShares[i];
           document.getElementById(`finalFairShare${i + 1}`).innerText =
@@ -185,6 +233,8 @@ function clearData() {
   for (var i = 0; i < table.rows.length - 2; i++) {
     document.getElementById(`initialQuota${i + 1}`).innerText = "-";
     document.getElementById(`finalQuota${i + 1}`).innerText = "-";
+    document.getElementById(`initialGeometricMean${i + 1}`).innerText = "-";
+    document.getElementById(`finalGeometricMean${i + 1}`).innerText = "-";
     document.getElementById(`initialFairShare${i + 1}`).innerText = "-";
     document.getElementById(`finalFairShare${i + 1}`).innerText = "-";
   }

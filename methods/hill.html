@@ -73,16 +73,16 @@
 
               <div class="col-md-12 column">
                 <a
-                  onclick="calculate()"
+                  onclick="addRow()"
                   class="btn btn-default pull-left"
                   id="buttons"
-                  >Calculate</a
+                  >Add Row</a
                 >
                 <a
-                  onclick="resetTable()"
+                  onclick="removeRow()"
                   class="pull-right btn btn-default"
                   id="buttons"
-                  >Reset</a
+                  >Delete Row</a
                 >
                 <br />
                 <br />
@@ -145,15 +145,19 @@
                 </table>
               </div>
             </div>
-            <a onclick="addRow()" class="btn btn-default pull-left" id="buttons"
-              >Add Row</a
+            <a
+              onclick="calculate()"
+              class="btn btn-default pull-left"
+              id="buttons"
+              >Calculate</a
             >
             <a
-              onclick="removeRow()"
+              onclick="resetTable()"
               class="pull-right btn btn-default"
               id="buttons"
-              >Delete Row</a
+              >Reset</a
             >
+            <p id="output"></p>
           </div>
 
           <!-- /.container -->
@@ -175,6 +179,6 @@
     <script src="../js/owl.carousel.min.js"></script>
     <script src="../js/jquery-validation.min.js"></script>
     <script src="../js/main.js"></script>
-    <script src="../js/methods/huntingtonhill.js"></script>
+    <script src="../js/methods/hill.js"></script>
   </body>
 </html>

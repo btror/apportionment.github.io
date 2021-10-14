@@ -57,9 +57,8 @@
                     Hill's method) was adopted by congress. This method is the
                     corrected version of Hill's method. It assigns seats in the
                     House of Representatives according to a priority value for
-                    each state. Priority values are determined by
-                    multiplying a state's population by a multiplier. This
-                    method is used now.
+                    each state. Priority values are determined by multiplying a
+                    state's population by a multiplier. This method is used now.
                   </p>
                   <input
                     type="number"
@@ -72,16 +71,16 @@
 
               <div class="col-md-12 column">
                 <a
-                  onclick="calculate()"
+                  onclick="addRow()"
                   class="btn btn-default pull-left"
                   id="buttons"
-                  >Calculate</a
+                  >Add Row</a
                 >
                 <a
-                  onclick="resetTable()"
+                  onclick="removeRow()"
                   class="pull-right btn btn-default"
                   id="buttons"
-                  >Reset</a
+                  >Delete Row</a
                 >
                 <br />
                 <br />
@@ -113,15 +112,19 @@
                 </table>
               </div>
             </div>
-            <a onclick="addRow()" class="btn btn-default pull-left" id="buttons"
-              >Add Row</a
+            <a
+              onclick="calculate()"
+              class="btn btn-default pull-left"
+              id="buttons"
+              >Calculate</a
             >
             <a
-              onclick="removeRow()"
+              onclick="resetTable()"
               class="pull-right btn btn-default"
               id="buttons"
-              >Delete Row</a
+              >Reset</a
             >
+            <p id="output"></p>
           </div>
 
           <!-- /.container -->

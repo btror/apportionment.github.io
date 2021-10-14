@@ -56,10 +56,10 @@
                     In 1792, congress approved Hamilton's method, proposed by
                     Alexander Hamilton. It was vetoed by Washington but later
                     adopted by congress in 1852 and used through 1911. It caused
-                    the Alabama Paradox in 1880. It assigns seats based on lower quotas.
-                    When all available seats aren't apportioned, the state with
-                    the highest fractional standard quota is assigned a
-                    remaining seat.
+                    the Alabama Paradox in 1880. It assigns seats based on lower
+                    quotas. When all available seats aren't apportioned, the
+                    state with the highest fractional standard quota is assigned
+                    a remaining seat.
                   </p>
                   <input
                     type="number"
@@ -72,16 +72,16 @@
 
               <div class="col-md-12 column">
                 <a
-                  onclick="calculate()"
+                  onclick="addRow()"
                   class="btn btn-default pull-left"
                   id="buttons"
-                  >Calculate</a
+                  >Add Row</a
                 >
                 <a
-                  onclick="resetTable()"
+                  onclick="removeRow()"
                   class="pull-right btn btn-default"
                   id="buttons"
-                  >Reset</a
+                  >Delete Row</a
                 >
                 <br />
                 <br />
@@ -121,15 +121,19 @@
                 </table>
               </div>
             </div>
-            <a onclick="addRow()" class="btn btn-default pull-left" id="buttons"
-              >Add Row</a
+            <a
+              onclick="calculate()"
+              class="btn btn-default pull-left"
+              id="buttons"
+              >Calculate</a
             >
             <a
-              onclick="removeRow()"
+              onclick="resetTable()"
               class="pull-right btn btn-default"
               id="buttons"
-              >Delete Row</a
+              >Reset</a
             >
+            <p id="output"></p>
           </div>
 
           <!-- /.container -->

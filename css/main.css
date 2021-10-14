@@ -226,6 +226,7 @@ textarea, label {
 
 .page-title {
   margin-bottom: 75px;
+  padding-top: 100px;
 }
 .page-title img {
   margin-bottom: 20px;
@@ -543,6 +544,15 @@ table td input {
 
 #buttons {
   width: 100pt;
+  background-color: rgba(255, 255, 255, 0.082);
+  color: #e6ae03;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+#output {
+  padding-bottom: 100px;
+  text-align: center;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
