@@ -52,7 +52,15 @@
               >
                 <div class="page-title text-center">
                   <h2>Equal <span class="primary">Proportions</span></h2>
-                  <p>A brief description about the history of Equal Proportions method.</p>
+                  <p>
+                    In 1941, the method of equal proportions (AKA Huntington
+                    Hill's method) was adopted by congress. This method is the
+                    corrected version of Hill's method. It assigns seats in the
+                    House of Representatives according to a priority value for
+                    each state. Priority values are determined by
+                    multiplying a state's population by a multiplier. This
+                    method is used now.
+                  </p>
                   <input
                     type="number"
                     class="seats"
@@ -63,10 +71,16 @@
               </div>
 
               <div class="col-md-12 column">
-                <a onclick="calculate()" class="btn btn-default pull-left" id="buttons"
+                <a
+                  onclick="calculate()"
+                  class="btn btn-default pull-left"
+                  id="buttons"
                   >Calculate</a
                 >
-                <a onclick="resetTable()" class="pull-right btn btn-default" id="buttons"
+                <a
+                  onclick="resetTable()"
+                  class="pull-right btn btn-default"
+                  id="buttons"
                   >Reset</a
                 >
                 <br />
@@ -99,8 +113,13 @@
                 </table>
               </div>
             </div>
-            <a onclick="addRow()" class="btn btn-default pull-left" id="buttons">Add Row</a>
-            <a onclick="removeRow()" class="pull-right btn btn-default" id="buttons"
+            <a onclick="addRow()" class="btn btn-default pull-left" id="buttons"
+              >Add Row</a
+            >
+            <a
+              onclick="removeRow()"
+              class="pull-right btn btn-default"
+              id="buttons"
               >Delete Row</a
             >
           </div>

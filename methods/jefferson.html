@@ -52,7 +52,13 @@
               >
                 <div class="page-title text-center">
                   <h2>Jefferson's <span class="primary">method</span></h2>
-                  <p>A brief description about the history of Jefferson's method.</p>
+                  <p>
+                    Proposed in 1791 and used through 1842, Jefferson's method
+                    of apportionment, proposed by Thomas Jefferson, was adopted
+                    by congress after George Washington vetoed Hamilton's
+                    method. It was rejected in 1842 because it was biased
+                    towards large states.
+                  </p>
                   <input
                     type="number"
                     class="seats"
@@ -63,10 +69,16 @@
               </div>
 
               <div class="col-md-12 column">
-                <a onclick="calculate()" class="btn btn-default pull-left" id="buttons"
+                <a
+                  onclick="calculate()"
+                  class="btn btn-default pull-left"
+                  id="buttons"
                   >Calculate</a
                 >
-                <a onclick="resetTable()" class="pull-right btn btn-default" id="buttons"
+                <a
+                  onclick="resetTable()"
+                  class="pull-right btn btn-default"
+                  id="buttons"
                   >Reset</a
                 >
                 <br />
@@ -111,8 +123,13 @@
                 </table>
               </div>
             </div>
-            <a onclick="addRow()" class="btn btn-default pull-left" id="buttons">Add Row</a>
-            <a onclick="removeRow()" class="pull-right btn btn-default" id="buttons"
+            <a onclick="addRow()" class="btn btn-default pull-left" id="buttons"
+              >Add Row</a
+            >
+            <a
+              onclick="removeRow()"
+              class="pull-right btn btn-default"
+              id="buttons"
               >Delete Row</a
             >
           </div>

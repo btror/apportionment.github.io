@@ -52,7 +52,14 @@
               >
                 <div class="page-title text-center">
                   <h2>Webster's <span class="primary">method</span></h2>
-                  <p>A brief description about the history of Webster's method.</p>
+                  <p>
+                    In 1832, Daniel Webster proposed a method similar to
+                    Jefferson's method. It was adopted by congress in 1842, but
+                    replaced by Hamilton's method in 1852, and adopted again in
+                    1901. The most noteworthy distinction of Webster's method is
+                    it rounds the quotas to the nearest whole number. It
+                    modifies the divisor like Jefferson's and Adam's method.
+                  </p>
                   <input
                     type="number"
                     class="seats"
@@ -63,10 +70,16 @@
               </div>
 
               <div class="col-md-12 column">
-                <a onclick="calculate()" class="btn btn-default pull-left" id="buttons"
+                <a
+                  onclick="calculate()"
+                  class="btn btn-default pull-left"
+                  id="buttons"
                   >Calculate</a
                 >
-                <a onclick="resetTable()" class="pull-right btn btn-default" id="buttons"
+                <a
+                  onclick="resetTable()"
+                  class="pull-right btn btn-default"
+                  id="buttons"
                   >Reset</a
                 >
                 <br />
@@ -111,8 +124,13 @@
                 </table>
               </div>
             </div>
-            <a onclick="addRow()" class="btn btn-default pull-left" id="buttons">Add Row</a>
-            <a onclick="removeRow()" class="pull-right btn btn-default" id="buttons"
+            <a onclick="addRow()" class="btn btn-default pull-left" id="buttons"
+              >Add Row</a
+            >
+            <a
+              onclick="removeRow()"
+              class="pull-right btn btn-default"
+              id="buttons"
               >Delete Row</a
             >
           </div>

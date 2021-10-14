@@ -51,8 +51,17 @@
                 "
               >
                 <div class="page-title text-center">
-                  <h2>Huntington Hill's <span class="primary">method</span></h2>
-                  <p>A brief description about the history of huntington hill's method.</p>
+                  <h2>Hill's <span class="primary">method</span></h2>
+                  <p>
+                    In the 1920s, congress started to take steps toward the
+                    apportionment method used to this day. One method, proposed
+                    by Joseph Hill, sought to keep the ratio of one state's
+                    "people per representative" to that of another as close to
+                    one as possible. A colleague of Joseph Hill, Edward
+                    Huntington, corrected an error in Hill's method, and named
+                    the corrected version the method of Equal Proportions (AKA
+                    Huntington Hill's method).
+                  </p>
                   <input
                     type="number"
                     class="seats"
@@ -63,10 +72,16 @@
               </div>
 
               <div class="col-md-12 column">
-                <a onclick="calculate()" class="btn btn-default pull-left" id="buttons"
+                <a
+                  onclick="calculate()"
+                  class="btn btn-default pull-left"
+                  id="buttons"
                   >Calculate</a
                 >
-                <a onclick="resetTable()" class="pull-right btn btn-default" id="buttons"
+                <a
+                  onclick="resetTable()"
+                  class="pull-right btn btn-default"
+                  id="buttons"
                   >Reset</a
                 >
                 <br />
@@ -78,10 +93,14 @@
                       <th class="text-center">population</th>
                       <th class="text-center">initial quota</th>
                       <th class="text-center">final quota</th>
-                      <th class="text-center">initial<br>geometric<br>mean</th>
-                      <th class="text-center">final<br>geometric<br>mean</th>
-                      <th class="text-center">initial<br>fair share</th>
-                      <th class="text-center">final<br>fair share</th>
+                      <th class="text-center">
+                        initial<br />geometric<br />mean
+                      </th>
+                      <th class="text-center">
+                        final<br />geometric<br />mean
+                      </th>
+                      <th class="text-center">initial<br />fair share</th>
+                      <th class="text-center">final<br />fair share</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -92,25 +111,33 @@
                           type="number"
                           name="population"
                           placeholder="Enter"
+                          id="population1"
                         />
                       </td>
                       <td style="width: 13.5714285714%">
-                        <p name="initialQuota">-</p>
+                        <p name="initialQuota" id="initialQuota1">-</p>
                       </td>
                       <td style="width: 13.5714285714%">
-                        <p name="finalQuota">-</p>
+                        <p name="finalQuota" id="finalQuota1">-</p>
                       </td>
                       <td style="width: 13.5714285714%">
-                        <p name="initialGeometricMean">-</p>
+                        <p
+                          name="initialGeometricMean"
+                          id="initialGeometricMean1"
+                        >
+                          -
+                        </p>
                       </td>
                       <td style="width: 13.5714285714%">
-                        <p name="finalGeometricMean">-</p>
+                        <p name="finalGeometricMean" id="finalGeometricMean1">
+                          -
+                        </p>
                       </td>
                       <td style="width: 13.5714285714%">
-                        <p name="initialFairShare">-</p>
+                        <p name="initialFairShare" id="initialFairShare1">-</p>
                       </td>
                       <td style="width: 13.5714285714%">
-                        <p name="finalFairShare">-</p>
+                        <p name="finalFairShare" id="finalFairShare1">-</p>
                       </td>
                     </tr>
                     <tr id="addr1"></tr>
@@ -118,8 +145,13 @@
                 </table>
               </div>
             </div>
-            <a onclick="addRow()" class="btn btn-default pull-left" id="buttons">Add Row</a>
-            <a onclick="removeRow()" class="pull-right btn btn-default" id="buttons"
+            <a onclick="addRow()" class="btn btn-default pull-left" id="buttons"
+              >Add Row</a
+            >
+            <a
+              onclick="removeRow()"
+              class="pull-right btn btn-default"
+              id="buttons"
               >Delete Row</a
             >
           </div>

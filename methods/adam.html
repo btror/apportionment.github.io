@@ -52,7 +52,13 @@
               >
                 <div class="page-title text-center">
                   <h2>Adam's <span class="primary">method</span></h2>
-                  <p>A brief description about the history of Adam's method.</p>
+                  <p>
+                    In 1822, John Quincy Adams proposed a new method of
+                    apportionment as a remedy for Hamilton's method. It divides
+                    all the populations by a modified divisor and rounds the
+                    results up to the upper quota. It was never adopted by
+                    congress.
+                  </p>
                   <input
                     type="number"
                     class="seats"
@@ -63,10 +69,16 @@
               </div>
 
               <div class="col-md-12 column">
-                <a onclick="calculate()" class="btn btn-default pull-left" id="buttons"
+                <a
+                  onclick="calculate()"
+                  class="btn btn-default pull-left"
+                  id="buttons"
                   >Calculate</a
                 >
-                <a onclick="resetTable()" class="pull-right btn btn-default" id="buttons"
+                <a
+                  onclick="resetTable()"
+                  class="pull-right btn btn-default"
+                  id="buttons"
                   >Reset</a
                 >
                 <br />
@@ -78,8 +90,8 @@
                       <th class="text-center">population</th>
                       <th class="text-center">initial quota</th>
                       <th class="text-center">final quota</th>
-                      <th class="text-center">initial<br>fair share</th>
-                      <th class="text-center">final<br>fair share</th>
+                      <th class="text-center">initial<br />fair share</th>
+                      <th class="text-center">final<br />fair share</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -111,8 +123,13 @@
                 </table>
               </div>
             </div>
-            <a onclick="addRow()" class="btn btn-default pull-left" id="buttons">Add Row</a>
-            <a onclick="removeRow()" class="pull-right btn btn-default" id="buttons"
+            <a onclick="addRow()" class="btn btn-default pull-left" id="buttons"
+              >Add Row</a
+            >
+            <a
+              onclick="removeRow()"
+              class="pull-right btn btn-default"
+              id="buttons"
               >Delete Row</a
             >
           </div>
