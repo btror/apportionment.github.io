@@ -34,7 +34,7 @@ function resetTable() {
   }
 }
 
-// Calculates the quotas, initial fair shares, final fair shares, and divisor for Hamilton's method.
+// Calculates the quotas, initial fair shares, final fair shares, and divisors for Jefferson's method.
 function calculate() {
   // Get the number of seats to apportion.
   seats = document.getElementById("seats").value;
