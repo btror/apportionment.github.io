@@ -7,12 +7,14 @@ function addRow() {
   var cell0 = row.insertCell(0);
   var cell1 = row.insertCell(1);
   var cell2 = row.insertCell(2);
+  var cell3 = row.insertCell(3);
 
   cell0.innerHTML = table.tBodies[0].rows.length - 1;
   cell1.innerHTML = `<input type="number" id="population${
     table.rows.length - 2
   }" name="population" placeholder="Enter"/>`;
-  cell2.innerHTML = `<p id="fairShare${table.rows.length - 2}">-</p>`;
+  cell2.innerHTML = `<p id="priority${table.rows.length - 2}">-</p>`;
+  cell3.innerHTML = `<p id="fairShare${table.rows.length - 2}">-</p>`;
   clearData();
 }
 
@@ -98,12 +100,15 @@ function calculate() {
         var index = priorityNumbers.indexOf(highestPriority);
         fairShares[index] += 1;
       }
+      var priorityNumbers = [];
       for (var i = 0; i < table.rows.length - 2; i++) {
-        document.getElementById(`fairShare${i + 1}`).innerText = fairShares[i];
+        priorityNumbers[i] =
+          populations[i] / Math.sqrt(fairShares[i] * (fairShares[i] + 1));
       }
-      document.getElementById("output").innerText = `Divisor is ${
-        Math.round(initialDivisor * 10000) / 10000
-      }`;
+      for (var i = 0; i < table.rows.length - 2; i++) {
+        document.getElementById(`priority${i + 1}`).innerText = Math.round(priorityNumbers[i] * 10000) / 10000;
+        document.getElementById(`fairShare${i + 1}`).innerText = fairShares[i];
+      }   
     }
   }
 }
@@ -111,6 +116,7 @@ function calculate() {
 function clearData() {
   for (var i = 0; i < table.rows.length - 2; i++) {
     document.getElementById(`fairShare${i + 1}`).innerText = "-";
+    document.getElementById(`priority${i + 1}`).innerText = "-";
   }
   document.getElementById("output").innerText = "";
 }
